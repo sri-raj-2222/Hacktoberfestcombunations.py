@@ -1,9 +1,9 @@
 def nCr(n, r):
-    return factorial(n) / (factorial(r) * factorial(n - r))  # ❌ Missing integer division
+    return factorial(n) // (factorial(r) * factorial(n - r))  # ✅ Integer division
 
 def factorial(n):
     if n == 0:
         return 1
     return n * factorial(n - 1)
 
-print(nCr(5, 2))  # Expected 10
+print(nCr(5, 2))  # ✅ 10
